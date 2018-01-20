@@ -25,7 +25,7 @@ public:
 
 CircularQueue::CircularQueue(int size) :front(0), back(0), capacity(size)
 {
-	node = new Node[size+1]; // ´õ¹Ì³ëµå±îÁö Æ÷ÇÔÇØ¼­ »ı¼º
+	node = new Node[size+1]; // ë”ë¯¸ë…¸ë“œê¹Œì§€ í¬í•¨í•´ì„œ ìƒì„±
 }
 
 CircularQueue::~CircularQueue()
@@ -36,9 +36,9 @@ CircularQueue::~CircularQueue()
 void CircularQueue::enqueue(int data)
 {
 	int pos;
-	// backÀÌ ¸¶Áö¸· ÀÎµ¦½º¿¡ Ã¤¿ì´Â °æ¿ì
-	// backÀº °è¼Ó ¼øÈ¯ÇÏ´Ï±î 0À¸·Î ÃÊ±âÈ­
-	// ¸¶Áö¸·¿£ pos·Î ´ã´Â´Ù.
+	// backì´ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ì— ì±„ìš°ëŠ” ê²½ìš°
+	// backì€ ê³„ì† ìˆœí™˜í•˜ë‹ˆê¹Œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+	// ë§ˆì§€ë§‰ì—” posë¡œ ë‹´ëŠ”ë‹¤.
 	if (back==capacity-1){
 		pos = back; back = 0;
 		node[pos].data = data;
@@ -50,9 +50,9 @@ void CircularQueue::enqueue(int data)
 int CircularQueue::dequeue()
 {
 	int pos = front;
-	// front°¡ ¸¶Áö¸· ÀÎµ¦½ºÀÇ µ¥ÀÌÅÍ¸¦ Á¦°ÅÇÏ´Â °æ¿ì
-	// frontµµ ¼øÈ¯ÇÏ¹Ç·Î 0À¸·Î ÃÊ±âÈ­
-	// ¸®ÅÏÀº pos·Î ÇÑ´Ù.
+	// frontê°€ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ì˜ ë°ì´í„°ë¥¼ ì œê±°í•˜ëŠ” ê²½ìš°
+	// frontë„ ìˆœí™˜í•˜ë¯€ë¡œ 0ìœ¼ë¡œ ì´ˆê¸°í™”
+	// ë¦¬í„´ì€ posë¡œ í•œë‹¤.
 	if (front == capacity - 1) front = 0;
 	else front++;
 	return node[pos].data;
@@ -65,16 +65,16 @@ int CircularQueue::getFront() const
 
 int CircularQueue::getBack() const
 {
-	// backÀº enqueue¿¡¼­ Áõ°¡ÇÏ¹Ç·Î -1 ÇØ¼­ Á¢±ÙÇØ¾ß ÇÔ
+	// backì€ enqueueì—ì„œ ì¦ê°€í•˜ë¯€ë¡œ -1 í•´ì„œ ì ‘ê·¼í•´ì•¼ í•¨
 	return node[back-1].data;
 }
 
 int CircularQueue::getSize() const
 {
-	// front°¡ backº¸´Ù ÀÛ°Å³ª °°Àº°æ¿ì
+	// frontê°€ backë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ê²½ìš°
 	if (front <= back) return back - front;
-	// front°¡ backº¸´Ù Å« °æ¿ì´Â 
-	// backÀÌ ´Ù½Ã µ¹¾Æ¿À°í front°¡ ÁøÇàÇÏ´Â °æ¿ìÀÌ´Ù.
+	// frontê°€ backë³´ë‹¤ í° ê²½ìš°ëŠ” 
+	// backì´ ë‹¤ì‹œ ëŒì•„ì˜¤ê³  frontê°€ ì§„í–‰í•˜ëŠ” ê²½ìš°ì´ë‹¤.
 	else if (front > back) return capacity - front + back;
 }
 
@@ -85,9 +85,9 @@ bool CircularQueue::isEmpty() const
 
 bool CircularQueue::isFull() const
 {
-	// front°¡ backº¸´Ù ÀÛÀ¸¸é backÀÌ ´õ¹Ì ¹Ù·Î Àü¿¡ ÀÖ¾î¾ß ÇÔ
+	// frontê°€ backë³´ë‹¤ ì‘ìœ¼ë©´ backì´ ë”ë¯¸ ë°”ë¡œ ì „ì— ìˆì–´ì•¼ í•¨
 	if (front <= back) back - front == capacity - 1;
-	// front°¡ backº¸´Ù Å©¸é backÀÌ front ¹Ù·Î Àü¿¡ ÀÖ¾î¾ß ÇÔ
+	// frontê°€ backë³´ë‹¤ í¬ë©´ backì´ front ë°”ë¡œ ì „ì— ìˆì–´ì•¼ í•¨
 	else back + 1 == front;
 }
 
