@@ -8,27 +8,27 @@ private:
 	int front;
 	int back;
 public:
-	// »ý¼ºÀÚ¿¡¼­ Å©±â¸¦ ¹Þ°í front¿Í backÀ» ÃÊ±âÈ­ÇØÁØ´Ù.
-	// µ¿ÀûÇÒ´ç±îÁö.
+	// ìƒì„±ìžì—ì„œ í¬ê¸°ë¥¼ ë°›ê³  frontì™€ backì„ ì´ˆê¸°í™”í•´ì¤€ë‹¤.
+	// ë™ì í• ë‹¹ê¹Œì§€.
 	Queue(int _size) :size(_size), front(0), back(-1)
 	{
 		data = new T[size];
 	}
-	// ¼Ò¸êÀÚ¿¡¼­ µ¿ÀûÇÒ´ç ÇØÁ¦
+	// ì†Œë©¸ìžì—ì„œ ë™ì í• ë‹¹ í•´ì œ
 	~Queue()
 	{
 		delete[] data;
 	}
 
-	// °ªÀ» ¹Þ¾Æ¼­ backÀÌ °¡¸®Å°°í ÀÖ´Â °÷¿¡ ³ÖÀº ÈÄ Áõ°¡½ÃÅ²´Ù.
+	// ê°’ì„ ë°›ì•„ì„œ backì´ ê°€ë¦¬í‚¤ê³  ìžˆëŠ” ê³³ì— ë„£ì€ í›„ ì¦ê°€ì‹œí‚¨ë‹¤.
 	void enqueue(T val)
 	{
 		data[++back] = val;
 		size++;
 	}
 
-	// Á¦ÀÏ ¾ÕÀÇ °ªÀ» Á¦°ÅÇÔÀ¸·Î µÚ¿¡¼­ºÎÅÍ ¶¯°Ü¾ß ÇÑ´Ù.
-	// ÀÌ ºÎºÐ ¶§¹®¿¡ ±²ÀåÈ÷ ºñÈ¿À²ÀûÀÌ´Ù. Á¦°ÅÇÑ °ªÀ» ¹ÝÈ¯ÇÑ´Ù.
+	// ì œì¼ ì•žì˜ ê°’ì„ ì œê±°í•¨ìœ¼ë¡œ ë’¤ì—ì„œë¶€í„° ë•¡ê²¨ì•¼ í•œë‹¤.
+	// ì´ ë¶€ë¶„ ë•Œë¬¸ì— êµ‰ìž¥ížˆ ë¹„íš¨ìœ¨ì ì´ë‹¤. ì œê±°í•œ ê°’ì„ ë°˜í™˜í•œë‹¤.
 	T dequeue()
 	{
 		T temp = data[front];
@@ -38,27 +38,27 @@ public:
 		return temp;
 	}
 
-	// ¾ÕÀÇ °ª¸¸ ¹ÝÈ¯
-	// ºñ¾îÀÖ´ÂÁö ¹Ýµå½Ã È®ÀÎÇØ¾ßÇÔ
+	// ì•žì˜ ê°’ë§Œ ë°˜í™˜
+	// ë¹„ì–´ìžˆëŠ”ì§€ ë°˜ë“œì‹œ í™•ì¸í•´ì•¼í•¨
 	T Front() const
 	{
 		return data[front];
 	}
 
-	// µÚÀÇ °ª¸¸ ¹ÝÈ¯
-	// ºñ¾îÀÖ´ÂÁö ¹Ýµå½Ã È®ÀÎÇØ¾ßÇÔ
+	// ë’¤ì˜ ê°’ë§Œ ë°˜í™˜
+	// ë¹„ì–´ìžˆëŠ”ì§€ ë°˜ë“œì‹œ í™•ì¸í•´ì•¼í•¨
 	T Back() const
 	{
 		return data[back];
 	}
 
-	// Å©±â ¹ÝÈ¯
+	// í¬ê¸° ë°˜í™˜
 	int Size() const
 	{
 		return size-1;
 	}
 
-	// ºñ¾îÀÖ´ÂÁö ¿©ºÎ ¹ÝÈ¯
+	// ë¹„ì–´ìžˆëŠ”ì§€ ì—¬ë¶€ ë°˜í™˜
 	bool empty() const
 	{
 		return back==-1 ? true : false;
