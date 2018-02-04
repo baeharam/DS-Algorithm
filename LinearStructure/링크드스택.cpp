@@ -57,7 +57,9 @@ public:
 // 기본 생성자이며 NULL과 0으로 초기화한다.
 template <typename T>
 Stack<T>::Stack() :topNode(NULL), size(0)
-{}
+{
+	std::cout << "스택을 생성했습니다!\n";
+}
 
 // 소멸자
 // topNode와 prevNode에 할당되었던 모든 메모리를 해제한다.
@@ -83,6 +85,7 @@ Stack<T>::~Stack()
 template <typename T>
 void Stack<T>::Push(const T& data)
 {
+	std::cout << "스택에 " << data << "를 추가했습니다.\n";
 	// 비어있다면 새로운 객체를 할당한다.
 	if (this->topNode == NULL)
 		this->topNode = new Node<T>(data, NULL);
@@ -100,6 +103,7 @@ template <typename T>
 T Stack<T>::Pop()
 {
 	// 임시변수들에 데이터와 topNode를 담는다.
+	std::cout << "스택에서 " << this->topNode->getData() << "를 삭제했습니다.\n";
 	int temp = this->topNode->getData();
 	Node<T> *old = this->topNode;
 
@@ -131,6 +135,7 @@ bool Stack<T>::IsEmpty() const
 template <typename T>
 int Stack<T>::Size() const
 {
+	std::cout << "스택의 크기는 " << this->size << "입니다.\n";
 	return this->size;
 }
 
@@ -138,6 +143,7 @@ int Stack<T>::Size() const
 template <typename T>
 T Stack<T>::Top() const
 {
+	std::cout << "가장 위의 데이터는 " << this->topNode->getData() << "입니다.\n";
 	return this->topNode->getData();
 }
 
@@ -150,15 +156,15 @@ int main(void)
 	s.Push(2);
 
 	// LIFO이므로 2,1로 빠진다.
-	std::cout << s.Pop() << '\n';
-	std::cout << s.Pop() << '\n';
+	s.Pop();
+	s.Pop();
 
 	// 스택에 5를 넣는다.
 	s.Push(5);
 	// 빼지 않고 출력만한다.
-	std::cout << s.Top() << '\n';
+	s.Top();
 	// 5만 있으니까 사이즈는 1
-	std::cout << s.Size() << '\n';
+	s.Size();
 
 	return 0;
 
