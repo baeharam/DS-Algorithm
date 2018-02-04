@@ -6,24 +6,24 @@ template <typename T>
 class Node{
 private:
 	T data;
-	// 이전 노드를 가리키는 포인터를 갖는다.
-	Node* prevNode;
+	// 다음 노드를 가리키는 포인터를 갖는다.
+	Node* nextNode;
 public:
-	Node(int _data = 0, Node* _prevNode = NULL);
-	Node* getPrev() const;
+	Node(int _data = 0, Node* _nextNode = NULL);
+	Node* getNext() const;
 	T getData() const;
-	void setPrev(Node<T>* prev);
+	void setNext(Node<T>* next);
 };
 
 template <typename T>
-Node<T>::Node(int _data, Node* _prevNode)
-	:data(_data), prevNode(_prevNode)
+Node<T>::Node(int _data, Node* _nextNode)
+	:data(_data), nextNode(_nextNode)
 {}
 
 template <typename T>
-Node<T>* Node<T>::getPrev() const
+Node<T>* Node<T>::getNext() const
 {
-	return prevNode;
+	return nextNode;
 }
 
 template <typename T>
@@ -33,51 +33,54 @@ T Node<T>::getData() const
 }
 
 template <typename T>
-void Node<T>::setPrev(Node* prev)
+void Node<T>::setNext(Node* next)
 {
-	prevNode = prev;
+	nextNode = next;
 }
 
 template <typename T>
 class Queue{
 private:
-	// 맨 앞과 맨 뒤를 가리키는 포인터를 갖는다.
-	Node<T>* frontNode;
-	Node<T>* backNode;
-	T sizeq;
+	Node<T>* frontNode; // 맨 앞 노드를 가리키는 포인터
+	Node<T>* backNode; // 맨 뒤 노드를 가리키는 포인터
+	int sizeq; // 큐의 사이즈
 public:
-	Queue() :frontNode(NULL), backNode(NULL), sizeq(0){}
+	Queue() :frontNode(NULL), backNode(NULL), sizeq(0){
+		std::cout << "큐를 생성했습니다!\n";
+	}
 	~Queue();
 	void enqueue(T data);
 	T dequeue();
 	int size();
 	bool empty() const;
-	void front() const;
-	void back() const;
+	T front() const;
+	T back() const;
 };
 
-// frontNode 부터 쭉 내려오면서 메모리 해제
+// frontNode 부터 계속 다음으로 가면서 메모리 해제
 template <typename T>
 Queue<T>::~Queue()
 {
 	Node<T>* front = frontNode;
 	while (front){
 		Node<T>* temp = front;
-		front = front->getPrev();
+		front = front->getNext();
 		delete temp;
 	}
 }
 
 template <typename T>
+// 데이터를 넣는 함수
 void Queue<T>::enqueue(T data)
 {
+	std::cout << "큐에 " << data << "를 삽입했습니다..\n";
 	Node<T>* newNode = new Node<T>(data, NULL);
 	// 아무것도 없다면 새로 생성해서 frontNode와 backNode를 초기화
 	if (empty())
 		frontNode = backNode = newNode;
 	// 하나라도 있다면 새로 생성해서 backNode 초기화
 	else{
-		backNode->setPrev(newNode);
+		backNode->setNext(newNode);
 		backNode = newNode;
 	}
 	sizeq++;
@@ -85,12 +88,13 @@ void Queue<T>::enqueue(T data)
 
 // 반드시 비어있는지 확인 해야함
 template <typename T>
+// 데이터를 제거하는 함수
 T Queue<T>::dequeue()
 {
+	std::cout << "큐에서 " << frontNode->getData() << "를 삭제했습니다..\n";
 	int num = frontNode->getData();
-	std::cout << num << std::endl;
 	Node<T>* temp = frontNode;
-	frontNode = frontNode->getPrev();
+	frontNode = frontNode->getNext();
 	delete temp;
 	sizeq--;
 	return num;
@@ -99,48 +103,47 @@ T Queue<T>::dequeue()
 template <typename T>
 int Queue<T>::size()
 {
-	std::cout << sizeq << '\n';
 	return sizeq;
 }
 
 template <typename T>
 bool Queue<T>::empty() const
 {
-	if (sizeq == 0){
-		std::cout << 1 << '\n';
-		return true;
-	}
-	else {
-		std::cout << 0 << '\n';
-		return false;
-	}
+	if (sizeq == 0) return true;
+	else return false;
 }
 
-// 반드시 비어있는지 확인 해야함
 template <typename T>
-void Queue<T>::front() const
+T Queue<T>::front() const
 {
-	std::cout << frontNode->getData() << '\n';
+	std::cout << "가장 앞에 있는 값은 " << frontNode->getData() << "입니다.\n";
+	return frontNode->getData();
 }
 
-// 반드시 비어있는지 확인 해야함
 template <typename T>
-void Queue<T>::back() const
+T Queue<T>::back() const
 {
-	std::cout << backNode->getData() << '\n';
+	std::cout << "가장 뒤에 있는 값은 " << backNode->getData() << "입니다.\n";
+	return backNode->getData();
 }
 
 
 int main(void)
 {
-	std::ios_base::sync_with_stdio(false);
 	Queue<int> q;
 
 	q.enqueue(1);
-	q.front();
 	q.enqueue(2);
+	q.enqueue(3);
+	q.enqueue(4);
+
+	q.front();
+	q.back();
+
+	q.dequeue();
+	q.dequeue();
+	q.dequeue();
 	q.dequeue();
 
 	return 0;
-
 }
