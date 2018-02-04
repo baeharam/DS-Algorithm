@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// 큐에 들어가질 노드 클래스
+// 덱에 들어가질 노드 클래스
 class Node{
 private:
 	int data;
@@ -9,60 +9,32 @@ private:
 	Node* prevNode;
 	Node* nextNode;
 public:
-	Node(int _data = 0, Node* _prevNode = NULL, Node* _nextNode = NULL);
-	Node* getPrev() const;
-	Node* getNext() const;
-	int getData() const;
-	void setPrev(Node* prev);
-	void setNext(Node* next);
+	Node(int _data = 0, Node* _prevNode = NULL, Node* _nextNode = NULL)
+		:data(_data), prevNode(_prevNode), nextNode(_nextNode){}
+	Node* getPrev() const { return prevNode; }
+	Node* getNext() const { return nextNode; }
+	int getData() const { return data; }
+	void setPrev(Node* prev) { prevNode = prev; }
+	void setNext(Node* next) { nextNode = next; }
 };
-
-Node::Node(int _data, Node* _prevNode, Node* _nextNode)
-	:data(_data), prevNode(_prevNode), nextNode(_nextNode)
-{}
-
-Node* Node::getPrev() const
-{
-	return prevNode;
-}
-
-int Node::getData() const
-{
-	return data;
-}
-
-void Node::setPrev(Node* prev)
-{
-	prevNode = prev;
-}
-
-void Node::setNext(Node* next)
-{
-	nextNode = next;
-}
-
-Node* Node::getNext() const
-{
-	return nextNode;
-}
 
 class Deque{
 private:
 	// 맨 앞과 맨 뒤를 가리키는 포인터를 갖는다.
 	Node* frontNode;
 	Node* backNode;
-	int sizeq;
+	int deque_size;
 public:
-	Deque() :frontNode(NULL), backNode(NULL), sizeq(0){}
+	Deque() :frontNode(NULL), backNode(NULL), deque_size(0){}
 	~Deque();
 	void push_front(int data);
 	void push_back(int data);
-	int pop_front();
-	int pop_back();
+	void pop_front();
+	void pop_back();
 	int size();
-	int empty();
-	void front() const;
-	void back() const;
+	bool empty();
+	void front();
+	void back();
 };
 
 // frontNode 부터 쭉 내려오면서 메모리 해제
@@ -81,15 +53,16 @@ void Deque::push_front(int data)
 {
 	Node* newNode = new Node(data, NULL, NULL);
 	// 아무것도 없다면 새로 생성해서 frontNode와 backNode를 초기화
-	if (!sizeq)
-		frontNode = backNode = newNode;
+	if (empty()) frontNode = backNode = newNode;
 	// 하나라도 있다면 새로 생성해서 frontNode 초기화
 	else{
-		newNode->setPrev(frontNode);
-		frontNode->setNext(newNode);
+		newNode->setNext(frontNode);
+		frontNode->setPrev(newNode);
 		frontNode = newNode;
 	}
-	sizeq++;
+	std::cout << "덱 가장 앞에 " << data << "를 삽입했습니다..\n";
+	std::cout << "----------------------------------------------\n";
+	deque_size++;
 }
 
 // 덱 가장 뒤에 데이터를 넣는다.
@@ -97,121 +70,93 @@ void Deque::push_back(int data)
 {
 	Node* newNode = new Node(data, NULL, NULL);
 	// 아무것도 없다면 새로 생성해서 frontNode와 backNode를 초기화
-	if (!sizeq)
-		frontNode = backNode = newNode;
+	if (empty()) frontNode = backNode = newNode;
 	// 하나라도 있다면 새로 생성해서 backNode 초기화
 	else{
-		backNode->setPrev(newNode);
-		newNode->setNext(backNode);
+		backNode->setNext(newNode);
+		newNode->setPrev(backNode);
 		backNode = newNode;
 	}
-	sizeq++;
+	std::cout << "덱 가장 뒤에 " << data << "를 삽입했습니다..\n";
+	std::cout << "----------------------------------------------\n";
+	deque_size++;
 }
 
 // 덱 가장 앞의 데이터를 빼고 출력한다. (리턴까지)
-int Deque::pop_front()
+void Deque::pop_front()
 {
-	// 큐에 들어있는 정수가 없는 경우
-	if (!sizeq){
-		std::cout << -1 << '\n';
-		return -1;
-	}
-	// 큐에 정수가 있는 경우 출력하고 메모리 삭제한 뒤 리턴
+	// 덱에 들어있는 정수가 없는 경우
+	if (empty()) std::cout << "덱이 비었습니다.\n";
+	// 덱에 정수가 있는 경우 출력하고 메모리 삭제한 뒤 리턴
 	else{
-		int num = frontNode->getData();
-		std::cout << num << std::endl;
+		int data = frontNode->getData();
 		Node* temp = frontNode;
-		frontNode = frontNode->getPrev();
-		if (frontNode != NULL) frontNode->setNext(NULL);
+		frontNode = frontNode->getNext();
+		if (frontNode != NULL) frontNode->setPrev(NULL);
 		delete temp;
-		sizeq--;
-		return num;
+		deque_size--;
+		std::cout << "덱 가장 앞에서 " << data << "을 제거했습니다..\n";
 	}
+	std::cout << "----------------------------------------------\n";
 }
 
 // 덱 가장 뒤의 데이터를 빼고 출력한다. (리턴까지)
-int Deque::pop_back()
+void Deque::pop_back()
 {
-	// 큐에 들어있는 정수가 없는 경우
-	if (!sizeq){
-		std::cout << -1 << '\n';
-		return -1;
-	}
-	// 큐에 정수가 있는 경우 출력하고 메모리 삭제한 뒤 리턴
+	// 덱에 들어있는 정수가 없는 경우
+	if (empty()) std::cout << "덱이 비었습니다.\n";
+	// 덱에 정수가 있는 경우 출력하고 메모리 삭제한 뒤 리턴
 	else{
-		int num = backNode->getData();
-		std::cout << num << std::endl;
+		int data = backNode->getData();
 		Node* temp = backNode;
-		backNode = backNode->getNext();
-		if (backNode != NULL) backNode->setPrev(NULL);
+		backNode = backNode->getPrev();
+		if (backNode != NULL) backNode->setNext(NULL);
 		delete temp;
-		sizeq--;
-		return num;
+		deque_size--;
+		std::cout << "덱 가장 뒤에서 " << data << "을 제거했습니다..\n";
 	}
+	std::cout << "----------------------------------------------\n";
 }
 
 int Deque::size()
 {
-	std::cout << sizeq << '\n';
-	return sizeq;
+	std::cout <<"덱의 크기는 "<< deque_size << "입니다.\n";
+	std::cout << "----------------------------------------------\n";
+	return deque_size;
 }
 
-int Deque::empty()
+bool Deque::empty()
 {
-	if (sizeq == 0){
-		std::cout << 1 << '\n';
-		return 1;
-	}
-	else {
-		std::cout << 0 << '\n';
-		return 0;
-	}
+	if (deque_size == 0) return true;
+	else return false;
 }
 
-void Deque::front() const
+void Deque::front()
 {
-	if (!sizeq) std::cout << -1 << '\n';
-	else std::cout << frontNode->getData() << '\n';
+	if (empty()) std::cout << "덱이 비었습니다.\n";
+	else std::cout << "덱의 가장 앞에 있는 값은 "<<frontNode->getData() << "입니다.\n";
+	std::cout << "----------------------------------------------\n";
 }
 
-void Deque::back() const
+void Deque::back()
 {
-	if (!sizeq) std::cout << -1 << '\n';
-	else std::cout << backNode->getData() << '\n';
+	if (empty()) std::cout << "덱이 비었습니다.\n";
+	else std::cout << "덱의 가장 뒤에 있는 값은 " << backNode->getData() << "입니다.\n";
+	std::cout << "----------------------------------------------\n";
 }
 
 
 int main(void)
 {
-	std::ios_base::sync_with_stdio(false);
-	int n; std::cin >> n; // 1<=n<=10,000
-	int data; std::string str; // 1<=data<=100,000
-	Deque q;
+	Deque dq;
+	dq.push_front(1);
+	dq.push_back(2);
+	dq.push_front(12);
 
-	while (n--){
-		std::cin >> str;
-		if (!str.compare("push_front")){
-			std::cin >> data;
-			q.push_front(data);
-		}
-		else if (!str.compare("push_back")){
-			std::cin >> data;
-			q.push_back(data);
-		}
-		else if (!str.compare("pop_front"))
-			q.pop_front();
-		else if (!str.compare("pop_back"))
-			q.pop_back();
-		else if (!str.compare("size"))
-			q.size();
-		else if (!str.compare("empty"))
-			q.empty();
-		else if (!str.compare("front"))
-			q.front();
-		else if (!str.compare("back"))
-			q.back();
-	}
+	dq.pop_front();
+	dq.pop_front();
+	dq.pop_front();
+	dq.pop_back();
 
 	return 0;
-
 }
