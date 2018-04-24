@@ -1,4 +1,4 @@
-#DS-Algorithm
+# DS-Algorithm
 
 [다음](https://github.com/baeharam/algos)을 참고해서 형식을 만들었습니다.
 
@@ -11,20 +11,22 @@
 
 | Algorithm                                                    |  C   |                             CPP                              | Java |
 | :----------------------------------------------------------- | :--: | :----------------------------------------------------------: | :--: |
-| [Bubble sort](http://sexycoder.tistory.com/83?category=726692) |      |               [✅](Bubble sort/Bubble sort.cpp)               |      |
-| [Selection sort](http://sexycoder.tistory.com/47?category=726692) |      |            [✅](Selection sort/Selection sort.cpp)            |      |
-| [Insertion sort](http://sexycoder.tistory.com/75?category=726692) |      |            [✅](Insertion sort/Insertion sort.cpp)            |      |
-| [Quick sort](http://sexycoder.tistory.com/30?category=726692) |      |                [✅](Quick sort/Quick sort.cpp)                |      |
-| [Merge sort](http://sexycoder.tistory.com/73?category=726692) |      |                [✅](Merge sort/Merge sort.cpp)                |      |
-| [Counting Sort](http://sexycoder.tistory.com/31?category=726692) |      |              [✅](Counting_sort/Counting_sort.c)              |      |
-| [Radix Sort](http://sexycoder.tistory.com/74?category=726692) |      |                 [✅](Radix_sort/Radix_sort.c)                 |      |
-| [Depth First Search](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/BFS%2CDFS.md) |      |     [✅](Depth First Search/DFS(Depth First Search).cpp)      |      |
-| [Breadth First Search](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/BFS%2CDFS.md) |      |   [✅](Breadth First Search/BFS(Breadth First Search).cpp)    |      |
+| [Bubble sort](http://sexycoder.tistory.com/83?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Bubble%20sort/Bubble%20sort.cpp) |      |
+| [Selection sort](http://sexycoder.tistory.com/47?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Selection%20sort/Selection%20sort.cpp) |      |
+| [Insertion sort](http://sexycoder.tistory.com/75?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Insertion%20sort/Insertion%20sort.cpp) |      |
+| [Quick sort](http://sexycoder.tistory.com/30?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Quick%20sort/Quick%20sort.cpp) |      |
+| [Merge sort](http://sexycoder.tistory.com/73?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Merge%20sort/Merge%20sort.cpp) |      |
+| [Counting Sort](http://sexycoder.tistory.com/31?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Counting%20sort/Counting%20sort.cpp) |      |
+| [Radix Sort](http://sexycoder.tistory.com/74?category=726692) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Radix%20sort/Radix%20sort.cpp) |      |
+| [Depth First Search](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/BFS%2CDFS.md) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Depth%20First%20Search/DFS(Depth%20First%20Search).cpp) |      |
+| [Breadth First Search](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/BFS%2CDFS.md) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Breadth%20First%20Search/BFS(Breath%20First%20Search).cpp) |      |
 | [0-1 knapsack problem](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/Knapsack%20Problem.md) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/0-1%20knapsack%20problem/0-1%20knapsackproblem.cpp) |      |
 | [Quick selection](http://sexycoder.tistory.com/101)          |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Quick%20selection/Quick%20Selection.cpp) |      |
 | [Huffman code](https://www.geeksforgeeks.org/greedy-algorithms-set-3-huffman-coding/) |      | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Huffman%20code/Huffman%20code.cpp) |      |
 
-#Implemented Data Structures
+
+
+# Implemented Data Structures
 
 | Data Structure                                               |  C   |                             CPP                              | Java |
 | :----------------------------------------------------------- | :--: | :----------------------------------------------------------: | :--: |
