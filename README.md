@@ -23,7 +23,7 @@
 | [0-1 knapsack problem](https://github.com/baeharam/TIL/blob/master/Algorithm%20PS/Knapsack%20Problem.md) |                                                              | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/0-1%20knapsack%20problem/0-1%20knapsackproblem.cpp) |                                                              |
 | [Quick selection](http://sexycoder.tistory.com/101)          |                                                              | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Quick%20selection/Quick%20Selection.cpp) |                                                              |
 | [Huffman code](https://www.geeksforgeeks.org/greedy-algorithms-set-3-huffman-coding/) |                                                              | [✅](https://github.com/baeharam/DS-Algorithm/blob/master/Huffman%20code/Huffman%20code.cpp) |                                                              |
-| [Kosaraju's algorithm](https://blog.qwaz.io/problem-solving/scc%EC%99%80-2-sat) | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Kosaraju's%20algorithm/Kosaraju's%20algorithm.c) |                                                              |                                                              |
+| [Kosaraju's algorithm](https://blog.qwaz.io/problem-solving/scc%EC%99%80-2-sat) | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Kosaraju's%20algorithm/Kosaraju's%20algorithm.c) | [:white_check_mark:](https://github.com/baeharam/PS/blob/master/DFS%26BFS/2150%EB%B2%88(Strongly%20Connected%20Component).cpp) |                                                              |
 
 
 
