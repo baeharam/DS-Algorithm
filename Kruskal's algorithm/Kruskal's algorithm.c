@@ -130,6 +130,19 @@ int Find(DisjointSet *set, int v)
 	else return Find(set, set[v].parent);
 }
 
+// 동적할당한 모든 배열의 메모리를 반환해주어야 한다.
+// Graph, Edge, DisjointSet, Vertex
+void Deallocation(Graph *g, Edge *MST, DisjointSet *set)
+{
+	for (int i = 1; i <= g->vertexNum; i++)
+		free(g->adj[i]);
+	free(g->adj);
+
+	free(g->edgeList);
+	free(MST);
+	free(set);
+}
+
 int main(void)
 {
 	Graph *g = CreateGraph();
@@ -155,6 +168,8 @@ int main(void)
 	int sum = 0;
 	for (int i = 0; i < g->edgeNum; i++) sum += MST[i].weight;
 	printf("%d\n", sum);
+
+	Deallocation(g, MST, set);
 
 	return 0;
 }
