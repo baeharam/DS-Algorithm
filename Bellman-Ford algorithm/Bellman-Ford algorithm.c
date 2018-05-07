@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-// vertex´Â A(0)ºÎÅÍ ½ÃÀÛÇÑ´Ù.
+// vertexëŠ” A(0)ë¶€í„° ì‹œì‘í•œë‹¤.
 enum { A, B, C, D, E, F, G, H, I, J, K };
 const int max = 2100000000;
 typedef enum { false, true } bool;
 
-// Edge´Â 2°³ÀÇ Á¤Á¡°ú weightÀ» °¡Áø´Ù.
+// EdgeëŠ” 2ê°œì˜ ì •ì ê³¼ weightì„ ê°€ì§„ë‹¤.
 typedef struct Edge {
 	int v1;
 	int v2;
 	int weight;
 }Edge;
 
-// Vertex´Â Á¤Á¡ÀÇ ¹øÈ£(È¤Àº ¾ËÆÄºª)¿Í ´ÙÀ½ Á¤Á¡À¸·ÎÀÇ Æ÷ÀÎÅÍº¯¼ö next¸¦ °¡Áø´Ù.
+// VertexëŠ” ì •ì ì˜ ë²ˆí˜¸(í˜¹ì€ ì•ŒíŒŒë²³)ì™€ ë‹¤ìŒ ì •ì ìœ¼ë¡œì˜ í¬ì¸í„°ë³€ìˆ˜ nextë¥¼ ê°€ì§„ë‹¤.
 typedef struct Vertex {
 	int v;
 	int distance;
@@ -20,7 +20,7 @@ typedef struct Vertex {
 	struct Vertex* next;
 }Vertex;
 
-// Graph´Â vertexÀÇ ¼ıÀÚ¿Í edgeÀÇ ¼ıÀÚ, ÀÎÁ¢¸®½ºÆ®, edgeÀÇ ¹è¿­À» °®´Â´Ù.
+// GraphëŠ” vertexì˜ ìˆ«ìì™€ edgeì˜ ìˆ«ì, ì¸ì ‘ë¦¬ìŠ¤íŠ¸, edgeì˜ ë°°ì—´ì„ ê°–ëŠ”ë‹¤.
 typedef struct Graph {
 	int vertexNum;
 	int edgeNum;
@@ -28,7 +28,7 @@ typedef struct Graph {
 	Edge* edgeList;
 }Graph;
 
-// vertex¸¦ µ¿ÀûÇÒ´çÇÏ¿© ¸®ÅÏÇÑ´Ù.
+// vertexë¥¼ ë™ì í• ë‹¹í•˜ì—¬ ë¦¬í„´í•œë‹¤.
 Vertex* CreateVertex(int v)
 {
 	Vertex *create = (Vertex*)malloc(sizeof(Vertex));
@@ -56,7 +56,7 @@ Edge* CreateEdgeList(int edgeNum)
 	return edgeList;
 }
 
-// vertex¸¦ ¿¬°áÇÏ¿© ÀÎÁ¢¸®½ºÆ®¸¦ ¸¸µç´Ù.
+// vertexë¥¼ ì—°ê²°í•˜ì—¬ ì¸ì ‘ë¦¬ìŠ¤íŠ¸ë¥¼ ë§Œë“ ë‹¤.
 void ConnectVertex(Vertex** adj, int v1, int v2)
 {
 	Vertex* current = adj[v1];
@@ -67,29 +67,21 @@ void ConnectVertex(Vertex** adj, int v1, int v2)
 	}
 }
 
-// qsort¸¦ ¾µ ¶§ weight ±âÁØ ¿À¸§Â÷¼ø Á¤·ÄÇÏ±â À§ÇÑ ºñ±³ÇÔ¼ö
-int cmp(const void* p1, const void* p2)
-{
-	Edge* e1 = (Edge*)p1;
-	Edge* e2 = (Edge*)p2;
-	return e1->weight - e2->weight;
-}
-
-// Graph¸¦ ¸¸µç´Ù.
+// Graphë¥¼ ë§Œë“ ë‹¤.
 Graph* CreateGraph()
 {
 	Graph *g = (Graph*)malloc(sizeof(Graph));
 	int v, e;
 	scanf("%d %d", &v, &e);
 
-	// vertex, edgeÀÇ °³¼ö ¼³Á¤ÇÏ°í ÀÎÁ¢ ¸®½ºÆ®, edge ¹è¿­ µ¿ÀûÇÒ´ç
+	// vertex, edgeì˜ ê°œìˆ˜ ì„¤ì •í•˜ê³  ì¸ì ‘ ë¦¬ìŠ¤íŠ¸, edge ë°°ì—´ ë™ì í• ë‹¹
 	g->vertexNum = v; g->edgeNum = e;
 	g->adj = CreateAdj(v);
 	g->edgeList = CreateEdgeList(e);
 
-	// ¿¬°áµÇ´Â Á¤Á¡°ú weightÀ» ÀÔ·ÂÇÏ¸é¼­ ´ÙÀ½À» ÁøÇàÇÑ´Ù.
-	// 1. ÀÎÁ¢¸®½ºÆ®·Î vertex¿Í vertex¸¦ ¿¬°áÇÑ´Ù.
-	// 2. edge ¹è¿­·Î °¢ edgeµéÀ» edgeList¿¡ ³Ö´Â´Ù.
+	// ì—°ê²°ë˜ëŠ” ì •ì ê³¼ weightì„ ì…ë ¥í•˜ë©´ì„œ ë‹¤ìŒì„ ì§„í–‰í•œë‹¤.
+	// 1. ì¸ì ‘ë¦¬ìŠ¤íŠ¸ë¡œ vertexì™€ vertexë¥¼ ì—°ê²°í•œë‹¤.
+	// 2. edge ë°°ì—´ë¡œ ê° edgeë“¤ì„ edgeListì— ë„£ëŠ”ë‹¤.
 	int v1, v2, w;
 	for (int i = 0; i < e; i++) {
 		scanf("%d%d%d", &v1, &v2, &w);
@@ -101,7 +93,7 @@ Graph* CreateGraph()
 	return g;
 }
 
-// distance, parentÀÇ ÃÊ±âÈ­ ÀÛ¾÷
+// distance, parentì˜ ì´ˆê¸°í™” ì‘ì—…
 void Init_SS(Graph *g, int s)
 {
 	for (int i = 1; i <= g->vertexNum; i++) {
@@ -111,7 +103,7 @@ void Init_SS(Graph *g, int s)
 	g->adj[s]->distance = 0;
 }
 
-// Relaxation ÀÛ¾÷
+// Relaxation ì‘ì—…
 void Relax(Graph *g, int u, int v, int w)
 {
 	if (g->adj[v]->distance > g->adj[u]->distance + w) {
@@ -120,7 +112,7 @@ void Relax(Graph *g, int u, int v, int w)
 	}
 }
 
-// º§¸¸-Æ÷µå ¾Ë°í¸®ÁòÀ» ÀÌ¿ëÇØ¼­ °¢ vertexÀÇ shortest path ±¸ÇÏ±â
+// ë²¨ë§Œ-í¬ë“œ ì•Œê³ ë¦¬ì¦˜ì„ ì´ìš©í•´ì„œ ê° vertexì˜ shortest path êµ¬í•˜ê¸°
 bool BellmanFord(Graph *g, int s)
 {
 	Init_SS(g, s);
@@ -150,7 +142,7 @@ void PrintPath(Graph *g, int s, int v)
 	
 	for (int j = i-1; j >= 0; j--) {
 		printf("%d", path[j]);
-		if (j != 0) printf("¡æ");
+		if (j != 0) printf("â†’");
 	}
 
 	free(path);
@@ -170,8 +162,8 @@ int main(void)
 	int s = 2;
 	BellmanFord(g, s);
 	for (int i = 1; i <= g->vertexNum; i++) {
-		printf("vertex %d : ÃÖ´Ü°æ·Î(%d), ", i, g->adj[i]->distance);
-		printf("ÀÌÁ¦±îÁöÀÇ °æ·Î(");
+		printf("vertex %d : ìµœë‹¨ê²½ë¡œ(%d), ", i, g->adj[i]->distance);
+		printf("ì´ì œê¹Œì§€ì˜ ê²½ë¡œ(");
 		PrintPath(g, s, i);
 		printf(")\n");
 	}
