@@ -1,5 +1,7 @@
 #include "Graph.h"
 
+const int max = 2100000000;
+
 // vertex를 동적할당하여 리턴한다.
 Vertex* CreateVertex(int v)
 {
