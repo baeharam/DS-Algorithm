@@ -1,5 +1,8 @@
 #include "Graph.c"
 
+// heap 구조체
+// 실제 heap으로 동작하는 heapTree와 할당크기인 capacity,
+// 그리고 현재 데이터의 개수인 currentSize를 갖는다.
 typedef struct heap {
 	int *heapTree;
 	int capacity;
@@ -57,13 +60,13 @@ void Insert(Heap *heap, Graph *g, Vertex *data)
 }
 
 // MinHeap에서 제거
-int extractMin(Heap *heap,Graph *g)
+int extractMin(Heap *heap, Graph *g)
 {
 	// 힙의 마지막 원소, 삽입할 때 currentSize를 증가시키기 때문에
 	// 삭제할 때는 1을 빼주어야 한다. 단, 0이 아닐 경우이므로 검사 후에 빼준다.
 	if (heap->currentSize == 0) {
 		printf("힙이 비었습니다.");
-		return;
+		return -1;
 	}
 	heap->currentSize--;
 	int last = heap->currentSize;
@@ -97,6 +100,7 @@ int extractMin(Heap *heap,Graph *g)
 			right = cur * 2 + 2;
 		}
 	}
-	
+
 	return min;
 }
+
