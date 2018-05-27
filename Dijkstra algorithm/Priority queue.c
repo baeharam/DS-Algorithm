@@ -1,4 +1,4 @@
-#include "Graph.c"
+#include "Graph.h"
 
 // heap 구조체
 // 실제 heap으로 동작하는 heapTree와 할당크기인 capacity,

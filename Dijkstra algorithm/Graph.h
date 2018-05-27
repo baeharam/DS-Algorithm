@@ -1,10 +1,7 @@
 #ifndef _GRAPH_H_
 #define _GRAPH_H_
 
-// vertex는 A(0)부터 시작한다.
-enum { A, B, C, D, E, F, G, H, I, J, K };
 const int max;
-typedef enum { false, true } bool;
 
 // Vertex는 정점의 번호(혹은 알파벳)와 다음 정점으로의 포인터변수 next를 가진다.
 typedef struct Vertex {
@@ -19,6 +16,7 @@ typedef struct Vertex {
 typedef struct Graph {
 	int vertexNum;
 	int edgeNum;
+	char **vertexName;
 	Vertex** adj;
 }Graph;
 
@@ -28,5 +26,14 @@ typedef struct Edge {
 	int v2;
 	int weight;
 }Edge;
+
+// 함수들 선언
+Vertex* CreateVertex(int v);
+Vertex** CreateAdj(int vertexNum);
+void ConnectVertex(Vertex** adj, int v1, int v2, int w);
+FILE* ReadGraph(int *vertexNum);
+Graph* CreateGraph();
+void Deallocation(Graph *g);
+
 
 #endif
