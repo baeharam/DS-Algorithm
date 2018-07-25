@@ -35,14 +35,13 @@
 
 # Implemented Data Structures
 
-| Data Structure                                               |  C   |                             CPP                              | Java |
-| :----------------------------------------------------------- | :--: | :----------------------------------------------------------: | :--: |
-| [Stack](http://sexycoder.tistory.com/52?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Stack/Stack(Linked%20lsit).cpp) |      |
-| [Queue](http://sexycoder.tistory.com/57?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Queue/Queue(Linked%20list).cpp) |      |
-| [Circular queue](http://sexycoder.tistory.com/57?category=726886) |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Circular%20queue/Circular%20queue(Array).cpp) |      |
-| [Priority queue](http://sexycoder.tistory.com/84?category=726886) |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Priority%20queue/Priority%20queue(Linked%20list).cpp) |      |
-| [Deque](http://sexycoder.tistory.com/85?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Deque/Deque.cpp) |      |
-| [Graph](http://sexycoder.tistory.com/77?category=729869)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/tree/master/Graph%20representation) |      |
-| [Max heap](https://www.geeksforgeeks.org/binary-heap/)       |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Heap/MaxHeap.cpp) |      |
-| [Min heap](https://www.geeksforgeeks.org/binary-heap/)       |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Heap/MinHeap.cpp) |      |
-| [Segment tree](https://www.acmicpc.net/blog/view/9)          |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Segment%20tree/Segment%20Tree.cpp) |      |
+| Data Structure                                               |  C   |                             CPP                              |                             Java                             |
+| :----------------------------------------------------------- | :--: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [Stack](http://sexycoder.tistory.com/52?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Stack/Stack(Linked%20lsit).cpp) | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Stack/StackList.java) |
+| [Queue](http://sexycoder.tistory.com/57?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Queue/Queue(Linked%20list).cpp) |                                                              |
+| [Circular queue](http://sexycoder.tistory.com/57?category=726886) |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Circular%20queue/Circular%20queue(Array).cpp) |                                                              |
+| [Deque](http://sexycoder.tistory.com/85?category=726886)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Deque/Deque.cpp) |                                                              |
+| [Graph](http://sexycoder.tistory.com/77?category=729869)     |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/tree/master/Graph%20representation) |                                                              |
+| [Max heap](https://www.geeksforgeeks.org/binary-heap/)       |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Heap/MaxHeap.cpp) |                                                              |
+| [Min heap](https://www.geeksforgeeks.org/binary-heap/)       |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Heap/MinHeap.cpp) |                                                              |
+| [Segment tree](https://www.acmicpc.net/blog/view/9)          |      | [:white_check_mark:](https://github.com/baeharam/DS-Algorithm/blob/master/Segment%20tree/Segment%20Tree.cpp) |                                                              |
