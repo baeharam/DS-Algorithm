@@ -1,7 +1,7 @@
 package stack;
 
-class Stack {
-	private Node top;
+class Stack<E> {
+	private Node<E> top;
 	private int size;
 	
 	public Stack() {
@@ -9,18 +9,18 @@ class Stack {
 		this.size = 0;
 	}
 	
-	private class Node {
-		private Object data;
-		private Node nextNode;
+	private class Node<T> {
+		private T data;
+		private Node<T> nextNode;
 		
-		public Node(Object data) {
+		public Node(T data) {
 			this.data = data;
 			nextNode = null;
 		}
 	}
 	
-	public void push(Object data) {
-		Node newNode = new Node(data);
+	public void push(E data) {
+		Node<E> newNode = new Node<E>(data);
 		newNode.nextNode = top;
 		top = newNode;
 		size++;
@@ -42,7 +42,7 @@ class Stack {
 		return size==0 ? true : false;
 	}
 	
-	public Object top() {
+	public E top() {
 		if(empty()) {
 			System.out.println("Stack is empty!!");
 			return null;
@@ -54,10 +54,12 @@ class Stack {
 public class StackList {
 	
 	public static void main(String[] args) {
-		Stack s = new Stack();
+		Stack<Integer> s = new Stack<Integer>();
+		Stack<String> s2 = new Stack<String>();
 		s.push(1);
-		s.push("hello");
-		System.out.println(s.top());
+		s.push(2);
+		s2.push("hi");
+		System.out.println(s2.top());
 	}
 
 }
