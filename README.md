@@ -16,7 +16,7 @@
 
 ## 자료구조
 
-* [연결 리스트(Linked List)](#연결-리스트(Linked-List))
+* 연결 리스트(Linked List)
 * 스택(Stack)
 * 큐(Queue)
 * 덱(Deque)
@@ -73,15 +73,17 @@
 
 ## 유용한 링크 모음
 
-* 공부자료
+* **공부자료**
   * [알고리즘 시각화 사이트: VisualAlgo](https://visualgo.net/en)
   * [자료구조 및 알고리즘 시각화 사이트: Data Structure Visualizaitons](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
   * [인프런: 권오흠 교수님 알고리즘 강좌](https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%95%EC%A2%8C/)
-* 좋은 글
+  * [빅-오 치트시트](http://bigocheatsheet.com/)
+* **좋은 글**
   * [plzrun, PS 공부를 하면서 좌절감을 느꼈던 글](http://plzrun.tistory.com/entry/PS%EA%B3%B5%EB%B6%80%EB%A5%BC-%ED%95%98%EB%A9%B4%EC%84%9C-%EC%A2%8C%EC%A0%88%EA%B0%90%EC%9D%84-%EB%8A%90%EB%82%80-%EB%B6%84%EB%93%A4%EC%9D%B4-%EC%9D%BD%EC%96%B4%EB%B4%A4%EC%9C%BC%EB%A9%B4-%ED%95%98%EB%8A%94-%EB%82%98%EC%9D%98-2016%EB%85%84)
   * [plzrun, PS 시작하기](http://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
   * [dreamoon, 어떻게 알고리즘 대회 실력을 키울 수 있을까(번역)](https://www.acmicpc.net/blog/view/48)
-  * 
+  * [baactree, 알고리즘 공부 방법/순서](http://baactree.tistory.com/14)
+  * [koosaga, 내가 문제풀이를 연습하는 방법](http://koosaga.com/217)
 
 
 
@@ -89,9 +91,9 @@
 
 ## 연결 리스트(Linked List)
 
-* [위키백과](https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8) / [Exynoa 블로그 설명](http://blog.eairship.kr/206?category=431859)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8) / [블로그 설명](http://blog.eairship.kr/206?category=431859)
 * [애니메이션](https://visualgo.net/en/list)
-* 노드라고 불리는 것에 데이터를 저장하며 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 자료구조.
+* 노드라는 곳에 데이터를 저장하며 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 자료구조.
 * **단일 연결 리스트(Singly Linked List)**: 노드의 포인터가 다음 노드를 가리킨다.
 
 ![단일 연결 리스트](./images/singly-linked-list.png)
@@ -104,7 +106,7 @@
 
 
 
-* **원형 연결 리스트(Circular Linked List)**: 마지막 노드의 포인터가 처음 노드를 가리킨다.
+* **환형 연결 리스트(Circular Linked List)**: 마지막 노드의 포인터가 처음 노드를 가리킨다.
 
 ![원형 연결 리스트](./images/circular-linked-list.png)
 
@@ -113,13 +115,13 @@
   * 탐색: `O(n)`
   * 삽입: `O(1)`
   * 삭제: `O(1)`
-* [백준에서 문제풀어보기](https://www.acmicpc.net/problem/tag/%EB%A7%81%ED%81%AC%EB%93%9C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
+* [BOJ 문제](https://www.acmicpc.net/problem/tag/%EB%A7%81%ED%81%AC%EB%93%9C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
 
 
 
 ## 스택(Stack)
 
-* [위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D) / [Exynoa 블로그 설명](http://blog.eairship.kr/210?category=431859)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D) / [블로그 설명](http://blog.eairship.kr/210?category=431859)
 * [배열로 구현하는 애니메이션](https://www.cs.usfca.edu/~galles/visualization/StackArray.html) 
 * [연결 리스트로 구현하는 애니메이션](https://www.cs.usfca.edu/~galles/visualization/StackLL.html)
 * 나중에 들어간 데이터가 먼저 나오는 **LIFO(Last In, First Out) 구조**로 데이터를 넣는 것을 푸시(push)라고 하며 꺼내는 것을 팝(pop)이라고 한다.
@@ -133,14 +135,14 @@
   * 탐색: `O(n)`
   * 삽입: `O(1)`
   * 삭제: `O(1)`
-* [백준에서 문제풀어보기](https://www.acmicpc.net/problem/tag/%EC%8A%A4%ED%83%9D)
-* [프로그래머스에서 문제풀어보기](https://programmers.co.kr/learn/courses/30/parts/12081)
+* [BOJ 문제](https://www.acmicpc.net/problem/tag/%EC%8A%A4%ED%83%9D)
+* [Programmers 문제](https://programmers.co.kr/learn/courses/30/parts/12081)
 
 
 
 ## 큐(Queue)
 
-* [위키백과](https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)) / [Exynoa 블로그 설명](http://blog.eairship.kr/213)
+* [위키백과](https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)) / [블로그 설명](http://blog.eairship.kr/213)
 * 처음에 들어간 데이터가 처음에 나오는 **FIFO(First In, First Out) 구조**로 `front`와 `rear`라는 변수를 유지하며 삽입(enqueue)과 삭제(dequeue)를 수행한다.
 * 선형 큐의 문제점을 <u>환형 큐나 링크드 큐로 보완</u>할 수 있다.
 
@@ -151,5 +153,26 @@
 * **시간복잡도**
   * 접근: `O(n)`
   * 탐색: `O(n)`
-  * 삽입: `O(n)`
-  * 삭제: `O(n)`
+  * 삽입: `O(1)`
+  * 삭제: `O(1)`
+* [BOJ 문제](https://www.acmicpc.net/problem/tag/%ED%81%90)
+* [Programmers 문제](https://programmers.co.kr/learn/courses/30/parts/12081)
+
+
+
+## 덱(Deque)
+
+* [위키백과(영어)](https://en.wikipedia.org/wiki/Double-ended_queue) / [블로그 설명](https://blog.naver.com/PostView.nhn?blogId=skout123&logNo=50135774766&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+* 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료구조의 한 형태이다.
+* 두 개의 포인터를 사용하여 삽입과 삭제를 수행할 수 있으며 큐와 스택을 합친 형태로 생각할 수 있다.
+
+![Deque](./images/deque.png)
+
+[사진출처](http://btechsmartclass.com/DS/U2_T11.html)
+
+* **시간복잡도**
+  * 접근: `O(n)`
+  * 탐색: `O(n)`
+  * 삽입: `O(1)`
+  * 삭제: `O(1)`
+* [BOJ 문제](https://www.acmicpc.net/problem/tag/%EB%8D%B1)
