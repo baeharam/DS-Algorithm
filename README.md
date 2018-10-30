@@ -20,16 +20,12 @@
 * 스택(Stack)
 * 큐(Queue)
 * 덱(Deque)
-* 그래프(Graph)
-  * 무방향 그래프(Undirected Graph)
-  * 방향 그래프(Directed Graph)
 * 트리(Tree)
-  * 이진 트리(Binary Tree)
-    * 이진 탐색 트리(Binary Search Tree)
-    * 펜윅 트리(Fenwick Tree)
+  * 이진 탐색 트리(Binary Search Tree)
   * 트라이(Trie)
   * 힙(Heap)
   * 세그먼트 트리(Segment Tree)
+  * 펜윅 트리(Fenwick Tree)
 * 해쉬 테이블(Hash Table)
 * 상호 배타적 집합(Union-Find, Disjoint-set)
 
@@ -176,3 +172,44 @@
   * 삽입: `O(1)`
   * 삭제: `O(1)`
 * [BOJ 문제](https://www.acmicpc.net/problem/tag/%EB%8D%B1)
+
+
+
+## 트리(Tree)
+
+사이클이 없고 모든 노드가 연결되어있는 연결 그래프를 말한다.
+
+## 이진 탐색 트리(Binary Search Tree)
+
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%83%90%EC%83%89_%ED%8A%B8%EB%A6%AC) / [블로그 설명](https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/)
+* 이진트리(Binary Tree)의 한 종류로서 노드의 왼쪽 부분트리에는 해당 노드보다 작은 값들을 지닌 노드들로, 오른쪽 부분트리에는 큰 값들을 지닌 노드들로 이루어져있다.
+* 모든 노드가 한쪽방향으로 이어지는 사향트리(Skewed tree)의 경우, 실질적인 효과를 발휘하지 못한다는 단점이 있다.
+
+![binary-search-tree](./images/binary-search-tree.gif)
+
+[GIF 출처](https://www.mathwarehouse.com/programming/gifs/binary-search-tree.php#binary-search-tree-insertion-node)
+
+* **시간복잡도** (단, 사향트리일 경우 전부 `O(n)`)
+  * 접근: `O(log n)`
+  * 탐색: `O(log n)`
+  * 삽입: `O(log n)`
+  * 삭제: `O(log n)`
+* [BOJ 문제](https://www.acmicpc.net/problem/tag/%EC%9D%B4%EC%A7%84%20%EA%B2%80%EC%83%89%20%ED%8A%B8%EB%A6%AC)
+
+
+
+## 트라이(Trie) 
+
+* [위키백과(영어)](https://en.wikipedia.org/wiki/Trie) / [블로그 설명](https://www.crocus.co.kr/1053)
+* 접미사 트리(prefix tree)라고 불리는 이 자료구조는 특정 문자열 검색을 할 때 유용하게 쓰인다.
+* 각 노드는 문자열이며 원하는 문자열을 `O(1)`에 접근할 수 있도록 주어진 문자열 범위만큼의 배열을 모든 노드가 갖고 있다.
+* 메모리를 많이 쓰기 때문에 압축버전인 기수트리(radix tree)로 개선할 수 있다.
+
+![trie](./images/trie.svg)
+
+[사진출처](https://datastructures.maximal.io/tries/)
+
+* **시간복잡도**
+  * 단어의 개수가 n개이고 각 단어의 길이가 m이면 `O(nm)`
+* **공간복잡도**
+  * 각 노드가 k개의 문자에 대한 레퍼런스를 가져야 한다면 `O(nk)`
