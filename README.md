@@ -4,11 +4,11 @@
 
 
 
-# 목표
+# 알고리즘과 자료구조
 
-* 자료구조와 알고리즘의 개념을 익힙니다.
-* 여러 곳에 퍼져있는 유용한 자료들을 한 곳에 모읍니다.
-* 각 자료구조와 알고리즘에 해당하는 알고리즘 문제들을 풀어봅니다.
+컴퓨터 공학도에게 아주 기본이 되는 덕목인 알고리즘과 자료구조들을 정리하고 공부하기 위한 저장소입니다.
+깃헙에서 외국분들이 만든 이런 종류의 저장소를 보기는 했지만 한국어로 된 저장소는 없던 터라 새롭게 만들게 되었습니다. 혼자 정리한 것이라 부족한 점이 많이 있으니 고쳐야 할 부분은 이슈나 풀리퀘스트 부탁드립니다.
+이 저장소를 통해서 저 뿐만 아니라 많은 분들이 도움을 얻었으면 좋겠습니다. :smile:
 
 
 
@@ -74,7 +74,7 @@
   * [자료구조 및 알고리즘 시각화 사이트: Data Structure Visualizaitons](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
   * [인프런: 권오흠 교수님 알고리즘 강좌](https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%95%EC%A2%8C/)
   * [빅-오 치트시트](http://bigocheatsheet.com/)
-* **좋은 글**
+* **Problem Solving 관련 좋은 글**
   * [plzrun, PS 공부를 하면서 좌절감을 느꼈던 글](http://plzrun.tistory.com/entry/PS%EA%B3%B5%EB%B6%80%EB%A5%BC-%ED%95%98%EB%A9%B4%EC%84%9C-%EC%A2%8C%EC%A0%88%EA%B0%90%EC%9D%84-%EB%8A%90%EB%82%80-%EB%B6%84%EB%93%A4%EC%9D%B4-%EC%9D%BD%EC%96%B4%EB%B4%A4%EC%9C%BC%EB%A9%B4-%ED%95%98%EB%8A%94-%EB%82%98%EC%9D%98-2016%EB%85%84)
   * [plzrun, PS 시작하기](http://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
   * [dreamoon, 어떻게 알고리즘 대회 실력을 키울 수 있을까(번역)](https://www.acmicpc.net/blog/view/48)
