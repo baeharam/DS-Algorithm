@@ -121,13 +121,13 @@
 
 ![단일 연결 리스트](./images/singly-linked-list.png)
 
-
+<br>
 
 * **이중 연결 리스트(Doubly Linked List)**: 노드에 포인터 2개가 있고 각각의 포인터가 앞과 뒤를 가리킨다.
 
 ![이중 연결 리스트](./images/doubly-linked-list.png)
 
-
+<br>
 
 * **환형 연결 리스트(Circular Linked List)**: 마지막 노드의 포인터가 처음 노드를 가리킨다.
 
@@ -139,7 +139,7 @@
   * 삽입: `O(1)`
   * 삭제: `O(1)`
 
-
+<br>
 
 ## <a name="stack">스택(Stack)</a>
 
@@ -158,7 +158,7 @@
   * 삽입: `O(1)`
   * 삭제: `O(1)`
 
-
+<br>
 
 ## <a name="queue">큐(Queue)</a>
 
@@ -176,7 +176,7 @@
   * 삽입: `O(1)`
   * 삭제: `O(1)`
 
-
+<br>
 
 ## <a name="deque">덱(Deque)</a>
 
@@ -195,13 +195,13 @@
   * 삭제: `O(1)`
 * [BOJ 문제](https://www.acmicpc.net/problem/tag/%EB%8D%B1)
 
-
+<br>
 
 ## 트리(Tree)
 
 사이클이 없고 모든 노드가 연결되어있는 연결 그래프를 말한다.
 
-
+<br>
 
 ## <a name="bst">이진 탐색 트리(Binary Search Tree)</a>
 
@@ -219,7 +219,7 @@
   * 삽입: `O(log n)`
   * 삭제: `O(log n)`
 
-
+<br>
 
 ## <a name="trie">트라이(Trie)</a> 
 
@@ -237,7 +237,7 @@
 * **공간복잡도**
   * 각 노드가 k개의 문자에 대한 레퍼런스를 가져야 한다면 `O(nk)`
 
-
+<br>
 
 # 알고리즘
 
@@ -255,7 +255,7 @@
 * **시간복잡도**: `O(n^2)`
 * **Stable**: `YES`
 
-
+<br>
 
 ## <a name="selection-sort">선택정렬(Selection Sort)</a>
 
@@ -269,7 +269,7 @@
 * **시간복잡도**: `O(n^2)`
 * **Stable**: `NO`
 
-
+<br>
 
 ## <a name="bubble-sort">버블정렬(Bubble Sort)</a>
 
@@ -283,7 +283,7 @@
 * **시간복잡도**: `O(n^2)`
 * **Stable**: `YES`
 
-
+<br>
 
 ## <a name="quick-sort">퀵정렬(Quick Sort)</a>
 
@@ -300,7 +300,7 @@
   * 평균: `O(nlogn)`
 * **Stable**: `NO`
 
-
+<br>
 
 ## <a name="merge-sort">합병정렬(Merge Sort)</a>
 
