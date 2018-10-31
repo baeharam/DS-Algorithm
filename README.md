@@ -6,13 +6,13 @@
 
 # 개요
 
-컴퓨터 공학도에게 아주 기본이 되는 덕목인 알고리즘과 자료구조들을 정리하고 공부하기 위한 저장소입니다.
+컴퓨터 공학도에게 기본이 되는 덕목인 알고리즘과 자료구조들을 정리하고 공부하기 위한 저장소입니다.
 깃헙에서 외국분들이 만든 이런 종류의 저장소를 보기는 했지만 한국어로 된 저장소는 없던 터라 새롭게 만들게 되었습니다. 
 
 혼자 정리한 것이라 부족한 점이 많이 있으니 고쳐야 할 부분은 이슈나 PR 부탁드립니다.
 이 저장소를 통해서 저 뿐만 아니라 많은 분들이 도움을 얻었으면 좋겠습니다. :smile:
 
-
+<br>
 
 # 목차
 
@@ -22,7 +22,7 @@
 * [Problem Solving 관련 좋은 글](#ps-link)
 * [온라인저지]()
 
-
+<br>
 
 ## <a name="data-structure">자료구조</a>
 
@@ -39,7 +39,7 @@
 * 해쉬 테이블(Hash Table)
 * 상호 배타적 집합(Union-Find, Disjoint-set)
 
-
+<br>
 
 ## <a name="algorithm">알고리즘</a>
 
@@ -79,7 +79,7 @@
 * 다이나믹 프로그래밍(Dynamic Programming)
 * 그리디 알고리즘(Greedy Algorithm)
 
-
+<br>
 
 ## <a name="online-judge">온라인 저지</a>
 
@@ -89,7 +89,7 @@
 * [Jungol](http://www.jungol.co.kr/)
 * [알고스팟](https://algospot.com/)
 
-
+<br>
 
 ## <a name="stduy-link">공부에 도움이 되는 자료들</a>
 
@@ -98,7 +98,7 @@
 * [인프런: 권오흠 교수님 알고리즘 강좌](https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%95%EC%A2%8C/)
 * [빅-오 치트시트](http://bigocheatsheet.com/)
 
-
+<br>
 
 ##<a name="ps-link">Problem Solving 관련 좋은 글</a>
 
@@ -108,7 +108,7 @@
 * [baactree님, 알고리즘 공부 방법/순서](http://baactree.tistory.com/14)
 * [koosaga님, 내가 문제풀이를 연습하는 방법](http://koosaga.com/217)
 
-
+<br>
 
 # 자료구조
 
