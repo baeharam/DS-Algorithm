@@ -84,24 +84,44 @@
 ## <a name="online-judge">온라인 저지</a>
 
 * [BOJ, 백준 온라인 저지](https://www.acmicpc.net/)
-* [프로그래머스 코딩테스트 연습](https://programmers.co.kr/learn/challenges)
+* [AOJ, 알고스팟](https://algospot.com/)
+* [CodeUp](http://codeup.kr/JudgeOnline/index.php)
+* [더블릿](http://59.23.150.58/index.php)
 * [삼성 SW Expert Academy](https://www.swexpertacademy.com/main/main.do)
-* [Jungol](http://www.jungol.co.kr/)
-* [알고스팟](https://algospot.com/)
+* [HackerRank](https://www.hackerrank.com/)
 
 <br>
 
-## <a name="stduy-link">공부에 도움이 되는 자료들</a>
+## <a name="online-contest">온라인 대회</a>
 
+* [AtCoder](http://atcoder.jp/)
+* [CSAcademy](https://csacademy.com/)
+* [Codeforces](https://codeforces.com/)
+* [TopCoder](https://www.topcoder.com/)
+
+<br>
+
+## <a name="stduy-link">공부에 도움이 되는 인터넷 자료들</a>
+
+* [라이(kks227)님 블로그, 강추!!!](https://blog.naver.com/PostList.nhn?blogId=kks227&from=postList&categoryNo=299)
 * [알고리즘 시각화 사이트: VisualAlgo](https://visualgo.net/en)
 * [자료구조 및 알고리즘 시각화 사이트: Data Structure Visualizaitons](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 * [인프런: 권오흠 교수님 알고리즘 강좌](https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%95%EC%A2%8C/)
-* [빅-오 치트시트](http://bigocheatsheet.com/)
+* [빅-오 치트시트, 다양한 알고리즘 복잡도가 있음](http://bigocheatsheet.com/)
 
 <br>
 
-##<a name="ps-link">Problem Solving 관련 좋은 글</a>
+## <a name="study-link2">공부에 도움이 되는 책들</a>
 
+* [Introductions to algorithms, CLRS](http://www.yes24.com/24/goods/3389708?scode=032&OzSrank=2)
+* [프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략](http://www.yes24.com/24/goods/8006522?scode=032&OzSrank=1)
+* [윤성우의 열혈 자료구조](http://www.yes24.com/24/goods/6214396?scode=032&OzSrank=1)
+
+<br>
+
+## <a name="ps-link">Problem Solving 관련 좋은 글</a>
+
+* [baekjoon님, 나는 어떻게 알고리즘을 공부했을까?](https://www.slideshare.net/Baekjoon/ss-52193873)
 * [plzrun님, PS 공부를 하면서 좌절감을 느꼈던 글](http://plzrun.tistory.com/entry/PS%EA%B3%B5%EB%B6%80%EB%A5%BC-%ED%95%98%EB%A9%B4%EC%84%9C-%EC%A2%8C%EC%A0%88%EA%B0%90%EC%9D%84-%EB%8A%90%EB%82%80-%EB%B6%84%EB%93%A4%EC%9D%B4-%EC%9D%BD%EC%96%B4%EB%B4%A4%EC%9C%BC%EB%A9%B4-%ED%95%98%EB%8A%94-%EB%82%98%EC%9D%98-2016%EB%85%84)
 * [plzrun님, PS 시작하기](http://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0)
 * [dreamoon님, 어떻게 알고리즘 대회 실력을 키울 수 있을까(번역)](https://www.acmicpc.net/blog/view/48)
@@ -114,7 +134,7 @@
 
 ## <a name="linked-list">연결 리스트(Linked List)</a>
 
-* [위키백과](https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8) / [Exynoa님 설명](http://blog.eairship.kr/206?category=431859)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B2%B0_%EB%A6%AC%EC%8A%A4%ED%8A%B8)
 * [애니메이션](https://visualgo.net/en/list)
 * 노드라는 곳에 데이터를 저장하며 각 노드가 데이터와 포인터를 가지고 한 줄로 연결되어 있는 자료구조.
 * **단일 연결 리스트(Singly Linked List)**: 노드의 포인터가 다음 노드를 가리킨다.
@@ -143,7 +163,7 @@
 
 ## <a name="stack">스택(Stack)</a>
 
-* [위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D) / [Exynoa님 설명](http://blog.eairship.kr/210?category=431859)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D)
 * [배열로 구현하는 애니메이션](https://www.cs.usfca.edu/~galles/visualization/StackArray.html) 
 * [연결 리스트로 구현하는 애니메이션](https://www.cs.usfca.edu/~galles/visualization/StackLL.html)
 * 나중에 들어간 데이터가 먼저 나오는 **LIFO(Last In, First Out) 구조**로 데이터를 넣는 것을 푸시(push)라고 하며 꺼내는 것을 팝(pop)이라고 한다.
@@ -162,7 +182,7 @@
 
 ## <a name="queue">큐(Queue)</a>
 
-* [위키백과](https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)) / [Exynoa님 설명](http://blog.eairship.kr/213)
+* [위키백과](https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0))
 * 처음에 들어간 데이터가 처음에 나오는 **FIFO(First In, First Out) 구조**로 `front`와 `rear`라는 변수를 유지하며 삽입(enqueue)과 삭제(dequeue)를 수행한다.
 * 선형 큐의 문제점을 <u>환형 큐나 링크드 큐로 보완</u>할 수 있다.
 
@@ -180,7 +200,7 @@
 
 ## <a name="deque">덱(Deque)</a>
 
-* [위키백과(영어)](https://en.wikipedia.org/wiki/Double-ended_queue) / [스카웃님 설명](https://blog.naver.com/PostView.nhn?blogId=skout123&logNo=50135774766&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+* [위키백과(영어)](https://en.wikipedia.org/wiki/Double-ended_queue)
 * 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료구조의 한 형태이다.
 * 두 개의 포인터를 사용하여 삽입과 삭제를 수행할 수 있으며 큐와 스택을 합친 형태로 생각할 수 있다.
 
@@ -193,7 +213,6 @@
   * 탐색: `O(n)`
   * 삽입: `O(1)`
   * 삭제: `O(1)`
-* [BOJ 문제](https://www.acmicpc.net/problem/tag/%EB%8D%B1)
 
 <br>
 
@@ -205,7 +224,7 @@
 
 ## <a name="bst">이진 탐색 트리(Binary Search Tree)</a>
 
-* [위키백과](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%83%90%EC%83%89_%ED%8A%B8%EB%A6%AC) / [ratsgo님 설명](https://ratsgo.github.io/data%20structure&algorithm/2017/10/22/bst/)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%83%90%EC%83%89_%ED%8A%B8%EB%A6%AC)
 * 이진트리(Binary Tree)의 한 종류로서 노드의 왼쪽 부분트리에는 해당 노드보다 작은 값들을 지닌 노드들로, 오른쪽 부분트리에는 큰 값들을 지닌 노드들로 이루어져있다.
 * 모든 노드가 한쪽방향으로 이어지는 사향트리(Skewed tree)의 경우, 실질적인 효과를 발휘하지 못한다는 단점이 있다.
 
@@ -223,7 +242,7 @@
 
 ## <a name="trie">트라이(Trie)</a> 
 
-* [위키백과(영어)](https://en.wikipedia.org/wiki/Trie) / [crocus님 설명](https://www.crocus.co.kr/1053)
+* [위키백과(영어)](https://en.wikipedia.org/wiki/Trie)
 * 접미사 트리(prefix tree)라고 불리는 이 자료구조는 특정 문자열 검색을 할 때 유용하게 쓰인다.
 * 각 노드는 문자열이며 원하는 문자열을 `O(1)`에 접근할 수 있도록 주어진 문자열 범위만큼의 배열을 모든 노드가 갖고 있다.
 * 메모리를 많이 쓰기 때문에 압축버전인 기수트리(radix tree)로 개선할 수 있다.
