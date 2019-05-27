@@ -265,9 +265,10 @@
 ## <a name="insertion-sort">삽입정렬(Insertion Sort)</a>
 
 * [위키백과](https://ko.wikipedia.org/wiki/%EC%82%BD%EC%9E%85_%EC%A0%95%EB%A0%AC)
+
 * 배열의 모든 요소를 앞에서부터 차례대로 이미 정렬된 배열 부분과 비교하여, 자신의 위치를 찾아 **삽입함으로써 정렬을 완성**하는 알고리즘이다.
 
-![insertion-sort](./images/insertion-sort.gif)
+* <iframe allowfullscreen src="http://www.algomation.com/embeddedplayer?embedded=true&algorithm=58b449db0e406f04000c7133" width="900" height="556" seamless="seamless" frameborder="0" style="border:1px solid lightgray" scrolling="no"></iframe>
 
 [GIF 출처](https://gfycat.com/ko/gifs/detail/densebaggyibis)
 
